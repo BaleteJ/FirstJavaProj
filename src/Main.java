@@ -14,16 +14,13 @@ public class Main {
         System.out.println("Int: " + wholeNumbers + " Long: " + largeDecimalNumbers + " Short: " + smallDecimalNumbers +
                 " Byte: " + byteData + " Float: " + floatData +" Double: " + doubleData +
                 " Boolean: " + booleanData + " Char: " + charData);
-
-
-
         //Non Primitive
 
 
         //If statement
         if(booleanData)
         {
-            System.out.println("Statement true"+largeDecimalNumbers);
+            System.out.println("Statement true and display long: "+largeDecimalNumbers);
         }
 
         //Switch Statement
@@ -39,7 +36,15 @@ public class Main {
         }
 
         //for loops
+        for(byte loop = 0; loop <= 9 ; loop++)
+        {
+            System.out.println("Loop value: " + loop);
+        }
+        System.out.println("Done with for loop");
+
         //while
+
+
         //do..while
     }
 }
