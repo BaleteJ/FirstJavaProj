@@ -43,7 +43,12 @@ public class Main {
         System.out.println("Done with for loop");
 
         //while
-
+        byte whileLoop = 0;
+        while(whileLoop != 5)
+        {
+            System.out.print("Loop " + whileLoop + " ");
+            whileLoop++;
+        }
 
         //do..while
     }
