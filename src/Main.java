@@ -25,5 +25,21 @@ public class Main {
         {
             System.out.println("Statement true"+largeDecimalNumbers);
         }
+
+        //Switch Statement
+
+        switch (smallDecimalNumbers){
+            case 1:
+                break;
+            case 2:
+                break;
+            default:
+                System.out.println("Day not found");
+                break;
+        }
+
+        //for loops
+        //while
+        //do..while
     }
 }
