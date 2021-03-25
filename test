@@ -1,0 +1,22 @@
+package com.company;
+
+public class Main {
+    public static main(string[] args){
+        //Primitive
+        int wholeNumbers = 122;
+        long largeDecimalNumbers = -12;
+        short smallDecimalNumbers = 12;
+        byte byteData = 120;
+        float floatData = 12.34;
+        double doubleData = 45.5672;
+        boolean booleanData = true;
+        char charData = 'd';
+
+        //Print all primitive types, output and run
+        System.out.print("Int: " + wholeNumbers + "/nLong: " + largeDecimalNumbers + "/nShort: " + smallDecimalNumbers +
+                "/nByte: " + byteData + "/nFloat: " + floatData + "/nFloat: " + floatData + "/nDouble: " + doubleData +
+                "/nBoolean: " + booleanData + "/nChar: " + charData);
+
+        //Non Primitive
+    }
+}
