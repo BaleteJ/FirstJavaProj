@@ -46,10 +46,17 @@ public class Main {
         byte whileLoop = 0;
         while(whileLoop != 5)
         {
-            System.out.print("Loop " + whileLoop + " ");
+            System.out.print("While Loop " + whileLoop + " ");
             whileLoop++;
         }
 
         //do..while
+        System.out.println();
+        byte doWhileLoop = 0;
+        do{
+            System.out.print("Do While Loop: " + doWhileLoop + " ");
+            doWhileLoop++;
+        }
+        while (doWhileLoop != 2);
     }
 }
