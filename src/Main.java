@@ -72,7 +72,7 @@ public class Main {
 
     //Trying methods
     static void sampleMethod(){
-        System.out.println("This method is executed.");
+        System.out.println("This sample method is executed.");
         return;
     }
 }
