@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //Primitive
         int wholeNumbers = 122;
         long largeDecimalNumbers = -12;
@@ -12,20 +12,19 @@ public class Main {
 
         //Print all primitive types, output and run
         System.out.println("Int: " + wholeNumbers + " Long: " + largeDecimalNumbers + " Short: " + smallDecimalNumbers +
-                " Byte: " + byteData + " Float: " + floatData +" Double: " + doubleData +
+                " Byte: " + byteData + " Float: " + floatData + " Double: " + doubleData +
                 " Boolean: " + booleanData + " Char: " + charData);
         //Non Primitive
 
 
         //If statement
-        if(booleanData)
-        {
-            System.out.println("Statement true and display long: "+largeDecimalNumbers);
+        if (booleanData) {
+            System.out.println("Statement true and display long: " + largeDecimalNumbers);
         }
 
         //Switch Statement
 
-        switch (smallDecimalNumbers){
+        switch (smallDecimalNumbers) {
             case 1:
                 break;
             case 2:
@@ -36,16 +35,14 @@ public class Main {
         }
 
         //for loops
-        for(byte loop = 0; loop <= 9 ; loop++)
-        {
+        for (byte loop = 0; loop <= 9; loop++) {
             System.out.println("Loop value: " + loop);
         }
         System.out.println("Done with for loop");
 
         //while
         byte whileLoop = 0;
-        while(whileLoop != 5)
-        {
+        while (whileLoop != 5) {
             System.out.print("While Loop " + whileLoop + " ");
             whileLoop++;
         }
@@ -53,7 +50,7 @@ public class Main {
         //do..while
         System.out.println();
         byte doWhileLoop = 0;
-        do{
+        do {
             System.out.print("Do While Loop: " + doWhileLoop + " ");
             doWhileLoop++;
         }
@@ -65,10 +62,17 @@ public class Main {
         String[] cars = {"Volvo", "Nissan", "Ford"};
         int[] numArray = {10, 20, 30, 40};
         byte stringLoop = 0;
-        while(stringLoop < cars.length)
-        {
+        while (stringLoop < cars.length) {
             System.out.println(cars[stringLoop]);
             stringLoop++;
         }
+
+        sampleMethod();
+    }
+
+    //Trying methods
+    static void sampleMethod(){
+        System.out.println("This method is executed.");
+        return;
     }
 }
