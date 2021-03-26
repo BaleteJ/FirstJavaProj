@@ -58,5 +58,17 @@ public class Main {
             doWhileLoop++;
         }
         while (doWhileLoop != 2);
+        System.out.println();
+        System.out.println("==============================================");
+
+        //Trying arrays
+        String[] cars = {"Volvo", "Nissan", "Ford"};
+        int[] numArray = {10, 20, 30, 40};
+        byte stringLoop = 0;
+        while(stringLoop < cars.length)
+        {
+            System.out.println(cars[stringLoop]);
+            stringLoop++;
+        }
     }
 }
