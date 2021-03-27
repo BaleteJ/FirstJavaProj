@@ -60,7 +60,6 @@ public class Main {
 
         //Trying arrays
         String[] cars = {"Volvo", "Nissan", "Ford"};
-        int[] numArray = {10, 20, 30, 40};
         byte stringLoop = 0;
         while (stringLoop < cars.length) {
             System.out.println(cars[stringLoop]);
@@ -68,11 +67,24 @@ public class Main {
         }
 
         sampleMethod();
+        sampleMethod2();
     }
 
     //Trying methods
     static void sampleMethod(){
         System.out.println("This sample method is executed.");
         return;
+    }
+
+    static void sampleMethod2(){
+        System.out.println();
+        int[] numArray = {10, 20, 30, 40};
+        byte methodLoop = 0;
+        for(methodLoop = 0 ; methodLoop < numArray.length ; methodLoop++)
+        {
+            System.out.println("numArray[" +  methodLoop + "]: " + numArray[methodLoop] );
+        }
+
+        System.out.println("Sample Method 2 is executed");
     }
 }
