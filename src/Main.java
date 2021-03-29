@@ -8,7 +8,9 @@ public class Main {
         //tryingArithmetic();
         //comparisonOperators();
         //operatorAssignment();
-        incrementDecrementOperators();
+        //incrementDecrementOperators();
+        //testingNestedLoops();
+        testingTypeCasting();
     }
 
     static void firstCode()
@@ -80,13 +82,14 @@ public class Main {
         }
     }
 
-    //Trying methods
-    static void sampleMethod(){
+    static void sampleMethod()
+    {
         System.out.println("This sample method is executed.");
         return;
     }
 
-    static void sampleMethod2(){
+    static void sampleMethod2()
+    {
         System.out.println();
         int[] numArray = {10, 20, 30, 40};
         byte methodLoop = 0;
@@ -179,5 +182,56 @@ public class Main {
         int incrementOperatorD = incrementOperatorA * --incrementOperatorB;
         System.out.println(incrementOperatorD);
         System.out.println(incrementOperatorB);
+
+    }
+
+    static void testingNestedLoops()
+    {
+        //int loop;
+        char draw = '0';
+        byte inputRows = 0; byte inputColumns = 0;
+
+        Scanner getInput = new Scanner(System.in);
+        System.out.println("Input how many rows: ");
+        inputRows = getInput.nextByte();
+        System.out.println("Input how many columns: ");
+        inputColumns = getInput.nextByte();
+
+
+        for(int loop1 = 0; loop1 < inputRows ; loop1++)
+        {
+            for(int loop2 = 0; loop2 < inputColumns ; loop2++)
+            {
+                if(loop1 == 0 || loop1 == (inputRows - 1))
+                {
+                    if(loop1 == 0)
+                    {
+                        System.out.print(draw);
+                    }
+                    else if(loop2 == 0 || loop2 == (inputColumns - 1))
+                    {
+                        System.out.print(draw);
+                    }
+                }
+
+            }
+            System.out.print("\n");
+        }
+    }
+
+    static void testingTypeCasting()
+    {
+        byte number1 = 5;
+
+        //Widening casting
+        // byte => short => char => int => long => float => double
+        short myShort = 9;
+        double myDouble = myShort;
+
+        System.out.println(myShort);
+        System.out.println(myDouble);
+
+        //Narrowing casting
+        //
     }
 }
