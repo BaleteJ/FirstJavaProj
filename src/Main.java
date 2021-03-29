@@ -1,5 +1,15 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        //firstCode();
+        //sampleMethod();
+        //sampleMethod2();
+        tryingArithmetic();
+    }
+
+    static void firstCode()
+    {
         //Primitive
         int wholeNumbers = 122;
         long largeDecimalNumbers = -12;
@@ -65,9 +75,6 @@ public class Main {
             System.out.println(cars[stringLoop]);
             stringLoop++;
         }
-
-        sampleMethod();
-        sampleMethod2();
     }
 
     //Trying methods
@@ -86,5 +93,20 @@ public class Main {
         }
 
         System.out.println("Sample Method 2 is executed");
+    }
+
+    static void tryingArithmetic()
+    {
+        int x = 0; int y = 0; int ans = 0;
+        Scanner getInput = new Scanner(System.in);
+
+        System.out.println("Addition /n Input X:" );
+        x = getInput.nextInt();
+        System.out.println("Input Y:" );
+        y = getInput.nextInt();
+
+        ans = x + y;
+        System.out.println("Sum of " + x + " and " + y + " is " + ans);
+
     }
 }
