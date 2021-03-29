@@ -9,8 +9,10 @@ public class Main {
         //comparisonOperators();
         //operatorAssignment();
         //incrementDecrementOperators();
-        testingNestedLoops();
+        //testingNestedLoops();
         //testingTypeCasting();
+        //jadenCaseKyu();       // to do
+        conditionalStatements();
     }
 
     static void firstCode()
@@ -242,6 +244,107 @@ public class Main {
 
         System.out.println(mySecondDouble);
         System.out.println(mySecondShort);
+
+    }
+
+    static void jadenCaseKyu()
+    {
+        String jadenTweet = "How can mirrors be real if our eyes aren't real";
+        String[] sortWords;
+
+        //for(byte loop = 0 ; loop < jadenTweet.length ; loop++)
+        //{
+
+        //}
+    }
+
+    static void conditionalStatements()
+    {
+        //If statement
+
+        if(20 > 18)
+        {
+            System.out.println("20 is grater than 18");
+        }
+        else
+        {
+            // conditions here
+            System.out.println("Statement..");
+        }
+
+        //ternary operator
+        int time = 18;
+
+        String result = (time < 18) ? "Good day." : "Good evening.";
+        System.out.println(result);
+
+        //Switch
+
+        byte num = 0;
+        System.out.println("Enter a number from 1-7: ");
+        Scanner getDay = new Scanner(System.in);
+        num = getDay.nextByte();
+
+        switch (num)
+        {
+            case 1:
+                System.out.println("The day is Monday");
+                break;
+            case 2:
+                System.out.println("The day is Tuesday");
+                break;
+            case 3:
+                System.out.println("The day is Wednesday");
+                break;
+            case 4:
+                System.out.println("The day is Thursday");
+                break;
+            case 5:
+                System.out.println("The day is Friday");
+                break;
+            case 6:
+                System.out.println("The day is Saturday");
+                break;
+            case 7:
+                System.out.println("The day is Sunday");
+                break;
+            default:
+                System.out.println("Number is invalid");
+                break;
+        }
+
+        if (num == 1)
+        {
+            System.out.println("The day is Monday");
+        }
+        else if(num == 2)
+        {
+            System.out.println("The day is Tuesday");
+        }
+        else if(num == 3)
+        {
+            System.out.println("The day is Wednesday");
+        }
+        else if(num == 4)
+        {
+            System.out.println("The day is Thursday");
+        }
+        else if(num == 5)
+        {
+            System.out.println("The day is Friday");
+        }
+        else if(num == 6)
+        {
+            System.out.println("The day is Saturday");
+        }
+        else if(num == 7)
+        {
+            System.out.println("The day is Sunday");
+        }
+        else
+        {
+            System.out.println("Number is invalid");
+        }
 
     }
 }
