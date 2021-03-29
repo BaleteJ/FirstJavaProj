@@ -5,7 +5,8 @@ public class Main {
         //firstCode();
         //sampleMethod();
         //sampleMethod2();
-        tryingArithmetic();
+        //tryingArithmetic();
+        comparisonOperators();
     }
 
     static void firstCode()
@@ -97,16 +98,57 @@ public class Main {
 
     static void tryingArithmetic()
     {
-        int x = 0; int y = 0; int ans = 0;
+        int x = 0; int y = 0;
+        int sum; int diff; int product; int div; int mod;
         Scanner getInput = new Scanner(System.in);
 
-        System.out.println("Addition /n Input X:" );
+        System.out.println("Addition \nInput X:" );
         x = getInput.nextInt();
         System.out.println("Input Y:" );
         y = getInput.nextInt();
 
-        ans = x + y;
-        System.out.println("Sum of " + x + " and " + y + " is " + ans);
+        sum = x+y; diff = x-y; product = x*y; div = x/y; mod = x%y;
+
+        System.out.println("Sum: " + sum +
+                            "\nDifference: " + diff +
+                            "\nProduct: " + product +
+                            "\nDiv: " + div +
+                            "\nModulo: " + mod);
+    }
+
+    static void comparisonOperators()
+    {
+        int x = 0; int y = 0; int ans = 0;
+        Scanner getInput = new Scanner(System.in);
+
+        System.out.println("Addition \nInput X:" );
+        x = getInput.nextInt();
+        System.out.println("Input Y:" );
+        y = getInput.nextInt();
+
+        if(x > y) {
+            System.out.println(x + " is greater than " + y);
+        }
+        if (x < y)
+        {
+            System.out.println(x + " is lesser than " + y);
+        }
+        if (x >= y)
+        {
+            System.out.println(x + " is greater than or equal to " + y);
+        }
+        if (x <= y)
+        {
+            System.out.println(x + " is lesser than or equal to " + y);
+        }
+        if (x == y)
+        {
+            System.out.println(x + " is equal to " + y);
+        }
+        if (x != y)
+        {
+            System.out.println(x + " is NOT equal to " + y);
+        }
 
     }
 }
