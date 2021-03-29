@@ -9,8 +9,8 @@ public class Main {
         //comparisonOperators();
         //operatorAssignment();
         //incrementDecrementOperators();
-        //testingNestedLoops();
-        testingTypeCasting();
+        testingNestedLoops();
+        //testingTypeCasting();
     }
 
     static void firstCode()
@@ -188,7 +188,7 @@ public class Main {
     static void testingNestedLoops()
     {
         //int loop;
-        char draw = '0';
+        char draw = '0'; char undraw = ' ';
         byte inputRows = 0; byte inputColumns = 0;
 
         Scanner getInput = new Scanner(System.in);
@@ -204,13 +204,17 @@ public class Main {
             {
                 if(loop1 == 0 || loop1 == (inputRows - 1))
                 {
-                    if(loop1 == 0)
+                    System.out.print(draw);
+                }
+                else
+                {
+                    if(loop2 == 0 || loop2 == (inputColumns - 1))
                     {
                         System.out.print(draw);
                     }
-                    else if(loop2 == 0 || loop2 == (inputColumns - 1))
+                    else
                     {
-                        System.out.print(draw);
+                        System.out.print(undraw);
                     }
                 }
 
@@ -232,6 +236,12 @@ public class Main {
         System.out.println(myDouble);
 
         //Narrowing casting
-        //
+        // byte <= short <= char <= int <= long <= float <= double
+        double mySecondDouble = 9.78;
+        short mySecondShort = (short) mySecondDouble;
+
+        System.out.println(mySecondDouble);
+        System.out.println(mySecondShort);
+
     }
 }
