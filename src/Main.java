@@ -12,7 +12,9 @@ public class Main {
         //testingNestedLoops();
         //testingTypeCasting();
         //jadenCaseKyu();       // to do
-        conditionalStatements();
+        //conditionalStatements();
+        //loopStatements();
+        loopExercise();
     }
 
     static void firstCode()
@@ -250,12 +252,39 @@ public class Main {
     static void jadenCaseKyu()
     {
         String jadenTweet = "How can mirrors be real if our eyes aren't real";
-        String[] sortWords;
+        char[] sortTweet = jadenTweet.toCharArray();
+        char[] jadenCaseArray = sortTweet;
+        String jadenCaseString = "";
+        boolean spaceFlag = false;
 
-        //for(byte loop = 0 ; loop < jadenTweet.length ; loop++)
-        //{
 
-        //}
+        for(byte loop = 0 ; loop < sortTweet.length ; loop++)
+        {
+            if(loop == 0)
+            {
+                jadenCaseArray[loop] = sortTweet[loop];
+            }
+            else
+            {
+                if(sortTweet[loop] == ' ')
+                {
+                    spaceFlag =  true;
+                }
+            }
+
+            if(spaceFlag)
+            {
+                jadenCaseArray[loop] = Character.toUpperCase(sortTweet[loop]);
+                spaceFlag = false;
+            }
+            else
+            {
+                jadenCaseArray[loop] = sortTweet[loop];
+            }
+
+        }
+
+        System.out.println(jadenCaseArray);
     }
 
     static void conditionalStatements()
@@ -345,6 +374,42 @@ public class Main {
         {
             System.out.println("Number is invalid");
         }
+
+    }
+
+    static void loopStatements()
+    {
+        //While loop
+
+        byte whileLoop = 0;
+        while (whileLoop != 10) {
+            System.out.print("While Loop " + whileLoop + " ");
+            whileLoop++;
+        }
+    }
+
+    static void loopExercise()
+    {
+        byte n = 6; byte loop = 0;
+
+        while( loop < n )
+        {
+            System.out.print("[" + ++loop + "] ");
+        }
+
+        //====================================================
+
+        byte x = 6; byte loop2 = 0; int sum = 0;
+
+        while( loop2 < x )
+        {
+            sum += ++loop2;
+        }
+
+        System.out.println("\n\nSum from 1 to " + x + " is: " + sum);
+
+        //==========================================================
+
 
     }
 }
