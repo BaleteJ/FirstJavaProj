@@ -6,7 +6,9 @@ public class Main {
         //sampleMethod();
         //sampleMethod2();
         //tryingArithmetic();
-        comparisonOperators();
+        //comparisonOperators();
+        //operatorAssignment();
+        incrementDecrementOperators();
     }
 
     static void firstCode()
@@ -150,5 +152,32 @@ public class Main {
             System.out.println(x + " is NOT equal to " + y);
         }
 
+    }
+
+    static void operatorAssignment()
+    {
+        //to add codes with var += var2 ...
+    }
+
+    static void incrementDecrementOperators()
+    {
+        int numberApples = 5;
+        numberApples++;
+
+        int numberOranges = 5;
+        numberOranges--;
+
+        System.out.println("numberApples: " + numberApples + "\nnumberOranges: " + numberOranges);
+
+        int incrementOperatorA = 5;
+        int incrementOperatorB = 3;
+
+        int incrementOperatorC = incrementOperatorA * incrementOperatorB++;
+        System.out.println(incrementOperatorC);
+        System.out.println(incrementOperatorB);
+
+        int incrementOperatorD = incrementOperatorA * --incrementOperatorB;
+        System.out.println(incrementOperatorD);
+        System.out.println(incrementOperatorB);
     }
 }
