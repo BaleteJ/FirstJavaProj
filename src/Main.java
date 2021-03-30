@@ -15,10 +15,10 @@ public class Main {
         //conditionalStatements();
         //loopStatements();
         loopExercise();
+        check();
     }
 
-    static void firstCode()
-    {
+    static void firstCode() {
         //Primitive
         int wholeNumbers = 122;
         long largeDecimalNumbers = -12;
@@ -86,88 +86,87 @@ public class Main {
         }
     }
 
-    static void sampleMethod()
-    {
+    static void sampleMethod() {
         System.out.println("This sample method is executed.");
         return;
     }
 
-    static void sampleMethod2()
-    {
+    static void sampleMethod2() {
         System.out.println();
         int[] numArray = {10, 20, 30, 40};
         byte methodLoop = 0;
-        for(methodLoop = 0 ; methodLoop < numArray.length ; methodLoop++)
-        {
-            System.out.println("numArray[" +  methodLoop + "]: " + numArray[methodLoop] );
+        for (methodLoop = 0; methodLoop < numArray.length; methodLoop++) {
+            System.out.println("numArray[" + methodLoop + "]: " + numArray[methodLoop]);
         }
 
         System.out.println("Sample Method 2 is executed");
     }
 
-    static void tryingArithmetic()
-    {
-        int x = 0; int y = 0;
-        int sum; int diff; int product; int div; int mod;
+    static void tryingArithmetic() {
+        int x = 0;
+        int y = 0;
+        int sum;
+        int diff;
+        int product;
+        int div;
+        int mod;
         Scanner getInput = new Scanner(System.in);
 
-        System.out.println("Addition \nInput X:" );
+        System.out.println("Addition \nInput X:");
         x = getInput.nextInt();
-        System.out.println("Input Y:" );
+        System.out.println("Input Y:");
         y = getInput.nextInt();
 
-        sum = x+y; diff = x-y; product = x*y; div = x/y; mod = x%y;
+        sum = x + y;
+        diff = x - y;
+        product = x * y;
+        div = x / y;
+        mod = x % y;
 
         System.out.println("Sum: " + sum +
-                            "\nDifference: " + diff +
-                            "\nProduct: " + product +
-                            "\nDiv: " + div +
-                            "\nModulo: " + mod);
+                "\nDifference: " + diff +
+                "\nProduct: " + product +
+                "\nDiv: " + div +
+                "\nModulo: " + mod);
     }
 
-    static void comparisonOperators()
-    {
-        int x = 0; int y = 0; int ans = 0;
+    static void comparisonOperators() {
+        int x = 0;
+        int y = 0;
+        int ans = 0;
         Scanner getInput = new Scanner(System.in);
 
-        System.out.println("Addition \nInput X:" );
+        System.out.println("Addition \nInput X:");
         x = getInput.nextInt();
-        System.out.println("Input Y:" );
+        System.out.println("Input Y:");
         y = getInput.nextInt();
 
-        if(x > y) {
+        if (x > y) {
             System.out.println(x + " is greater than " + y);
         }
-        if (x < y)
-        {
+        if (x < y) {
             System.out.println(x + " is lesser than " + y);
         }
-        if (x >= y)
-        {
+        if (x >= y) {
             System.out.println(x + " is greater than or equal to " + y);
         }
-        if (x <= y)
-        {
+        if (x <= y) {
             System.out.println(x + " is lesser than or equal to " + y);
         }
-        if (x == y)
-        {
+        if (x == y) {
             System.out.println(x + " is equal to " + y);
         }
-        if (x != y)
-        {
+        if (x != y) {
             System.out.println(x + " is NOT equal to " + y);
         }
 
     }
 
-    static void operatorAssignment()
-    {
+    static void operatorAssignment() {
         //to add codes with var += var2 ...
     }
 
-    static void incrementDecrementOperators()
-    {
+    static void incrementDecrementOperators() {
         int numberApples = 5;
         numberApples++;
 
@@ -189,11 +188,12 @@ public class Main {
 
     }
 
-    static void testingNestedLoops()
-    {
+    static void testingNestedLoops() {
         //int loop;
-        char draw = '0'; char undraw = ' ';
-        byte inputRows = 0; byte inputColumns = 0;
+        char draw = '0';
+        char undraw = ' ';
+        byte inputRows = 0;
+        byte inputColumns = 0;
 
         Scanner getInput = new Scanner(System.in);
         System.out.println("Input how many rows: ");
@@ -202,22 +202,14 @@ public class Main {
         inputColumns = getInput.nextByte();
 
 
-        for(int loop1 = 0; loop1 < inputRows ; loop1++)
-        {
-            for(int loop2 = 0; loop2 < inputColumns ; loop2++)
-            {
-                if(loop1 == 0 || loop1 == (inputRows - 1))
-                {
+        for (int loop1 = 0; loop1 < inputRows; loop1++) {
+            for (int loop2 = 0; loop2 < inputColumns; loop2++) {
+                if (loop1 == 0 || loop1 == (inputRows - 1)) {
                     System.out.print(draw);
-                }
-                else
-                {
-                    if(loop2 == 0 || loop2 == (inputColumns - 1))
-                    {
+                } else {
+                    if (loop2 == 0 || loop2 == (inputColumns - 1)) {
                         System.out.print(draw);
-                    }
-                    else
-                    {
+                    } else {
                         System.out.print(undraw);
                     }
                 }
@@ -227,8 +219,7 @@ public class Main {
         }
     }
 
-    static void testingTypeCasting()
-    {
+    static void testingTypeCasting() {
         byte number1 = 5;
 
         //Widening casting
@@ -249,8 +240,7 @@ public class Main {
 
     }
 
-    static void jadenCaseKyu()
-    {
+    static void jadenCaseKyu() {
         String jadenTweet = "How can mirrors be real if our eyes aren't real";
         char[] sortTweet = jadenTweet.toCharArray();
         char[] jadenCaseArray = sortTweet;
@@ -258,27 +248,19 @@ public class Main {
         boolean spaceFlag = false;
 
 
-        for(byte loop = 0 ; loop < sortTweet.length ; loop++)
-        {
-            if(loop == 0)
-            {
+        for (byte loop = 0; loop < sortTweet.length; loop++) {
+            if (loop == 0) {
                 jadenCaseArray[loop] = sortTweet[loop];
-            }
-            else
-            {
-                if(sortTweet[loop] == ' ')
-                {
-                    spaceFlag =  true;
+            } else {
+                if (sortTweet[loop] == ' ') {
+                    spaceFlag = true;
                 }
             }
 
-            if(spaceFlag)
-            {
+            if (spaceFlag) {
                 jadenCaseArray[loop] = Character.toUpperCase(sortTweet[loop]);
                 spaceFlag = false;
-            }
-            else
-            {
+            } else {
                 jadenCaseArray[loop] = sortTweet[loop];
             }
 
@@ -287,16 +269,12 @@ public class Main {
         System.out.println(jadenCaseArray);
     }
 
-    static void conditionalStatements()
-    {
+    static void conditionalStatements() {
         //If statement
 
-        if(20 > 18)
-        {
+        if (20 > 18) {
             System.out.println("20 is grater than 18");
-        }
-        else
-        {
+        } else {
             // conditions here
             System.out.println("Statement..");
         }
@@ -314,8 +292,7 @@ public class Main {
         Scanner getDay = new Scanner(System.in);
         num = getDay.nextByte();
 
-        switch (num)
-        {
+        switch (num) {
             case 1:
                 System.out.println("The day is Monday");
                 break;
@@ -342,43 +319,27 @@ public class Main {
                 break;
         }
 
-        if (num == 1)
-        {
+        if (num == 1) {
             System.out.println("The day is Monday");
-        }
-        else if(num == 2)
-        {
+        } else if (num == 2) {
             System.out.println("The day is Tuesday");
-        }
-        else if(num == 3)
-        {
+        } else if (num == 3) {
             System.out.println("The day is Wednesday");
-        }
-        else if(num == 4)
-        {
+        } else if (num == 4) {
             System.out.println("The day is Thursday");
-        }
-        else if(num == 5)
-        {
+        } else if (num == 5) {
             System.out.println("The day is Friday");
-        }
-        else if(num == 6)
-        {
+        } else if (num == 6) {
             System.out.println("The day is Saturday");
-        }
-        else if(num == 7)
-        {
+        } else if (num == 7) {
             System.out.println("The day is Sunday");
-        }
-        else
-        {
+        } else {
             System.out.println("Number is invalid");
         }
 
     }
 
-    static void loopStatements()
-    {
+    static void loopStatements() {
         //While loop
 
         byte whileLoop = 0;
@@ -388,25 +349,25 @@ public class Main {
         }
     }
 
-    static void loopExercise()
-    {
+    static void loopExercise() {
 
 
         //====================================================
 
-        byte n = 11; byte loop = 0;
+        byte n = 11;
+        byte loop = 0;
 
-        while( loop < n )
-        {
+        while (loop < n) {
             System.out.print("[" + ++loop + "] ");
         }
 
         //====================================================
 
-        byte x = 10; byte loop2 = 0; int sum = 0;
+        byte x = 10;
+        byte loop2 = 0;
+        int sum = 0;
 
-        while( loop2 < x )
-        {
+        while (loop2 < x) {
             sum += ++loop2;
         }
 
@@ -414,15 +375,32 @@ public class Main {
 
         //==========================================================
 
-        byte y = 11; byte loop3 = -1;
+        byte y = 11;
+        byte loop3 = -1;
 
         do {
-            System.out.print( (++loop3 % 2 == 0) ?  loop3+2 : " " );
-        }while(loop3 < ( (y-1)*2) );
+            System.out.print((++loop3 % 2 == 0) ? loop3 + 2 : " ");
+        } while (loop3 < ((y - 1) * 2));
 
         //==========================================================
+        System.out.println("\n");
 
+        byte z = 7;
+        int fibCurrent = 1;
+        int fibLast = 0;
+        int fibSum;
 
+        for (byte loop4 = 0; loop4 < z; loop4++) {
+            System.out.print(fibCurrent + " ");
+
+            fibSum = fibCurrent + fibLast;
+            fibLast = fibCurrent;
+            fibCurrent = fibSum;
+        }
+    }
+
+    static void check()
+    {
 
     }
 }
