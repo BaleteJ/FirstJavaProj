@@ -390,7 +390,11 @@ public class Main {
 
     static void loopExercise()
     {
-        byte n = 6; byte loop = 0;
+
+
+        //====================================================
+
+        byte n = 11; byte loop = 0;
 
         while( loop < n )
         {
@@ -399,7 +403,7 @@ public class Main {
 
         //====================================================
 
-        byte x = 6; byte loop2 = 0; int sum = 0;
+        byte x = 10; byte loop2 = 0; int sum = 0;
 
         while( loop2 < x )
         {
@@ -409,6 +413,15 @@ public class Main {
         System.out.println("\n\nSum from 1 to " + x + " is: " + sum);
 
         //==========================================================
+
+        byte y = 11; byte loop3 = -1;
+
+        do {
+            System.out.print( (++loop3 % 2 == 0) ?  loop3+2 : " " );
+        }while(loop3 < ( (y-1)*2) );
+
+        //==========================================================
+
 
 
     }
