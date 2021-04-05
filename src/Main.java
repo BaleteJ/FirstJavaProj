@@ -1,3 +1,5 @@
+import javax.sound.midi.SysexMessage;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -11,11 +13,15 @@ public class Main {
         //incrementDecrementOperators();
         //testingNestedLoops();
         //testingTypeCasting();
-        //jadenCaseKyu();       // to do
+        //codewarsTestbed();       // to do
         //conditionalStatements();
         //loopStatements();
-        loopExercise();
-        check();
+        //loopExercise();
+        //testingArrays();
+        //usingForEach();
+        System.out.println("Number of words in string: " + countWords("The quick brown fox jumps over the lazy dog."));
+        System.out.println("Number of vowels in string: " + countVowels("aAaA IJJJJJO"));
+
     }
 
     static void firstCode() {
@@ -240,33 +246,18 @@ public class Main {
 
     }
 
-    static void jadenCaseKyu() {
+    static void codewarsTestbed() {
         String jadenTweet = "How can mirrors be real if our eyes aren't real";
-        char[] sortTweet = jadenTweet.toCharArray();
-        char[] jadenCaseArray = sortTweet;
-        String jadenCaseString = "";
-        boolean spaceFlag = false;
+        String[] sortTweet = jadenTweet.split(" "); int loopIndex = 0;
+        String[] cappedVer = sortTweet;
 
-
-        for (byte loop = 0; loop < sortTweet.length; loop++) {
-            if (loop == 0) {
-                jadenCaseArray[loop] = sortTweet[loop];
-            } else {
-                if (sortTweet[loop] == ' ') {
-                    spaceFlag = true;
-                }
-            }
-
-            if (spaceFlag) {
-                jadenCaseArray[loop] = Character.toUpperCase(sortTweet[loop]);
-                spaceFlag = false;
-            } else {
-                jadenCaseArray[loop] = sortTweet[loop];
-            }
-
+        for(String loop : sortTweet)
+        {
+            cappedVer[loopIndex++] = loop.substring(0,1).toUpperCase() + loop.substring(1);
         }
 
-        System.out.println(jadenCaseArray);
+        String finalString = String.join(" ", cappedVer);
+        System.out.println(finalString);
     }
 
     static void conditionalStatements() {
@@ -399,8 +390,64 @@ public class Main {
         }
     }
 
-    static void check()
+    static void testingArrays()
     {
+        String[] names = {"Jason", "Balete", "Jumawan"};
 
+        System.out.println(names[0] + names[1]);
+        names[2] = "Delantar";
+
+        for(int i=0 ; i < names.length ; i++ )
+        {
+            System.out.println(names[i]);
+        }
+
+        // for each loop
+
+        for( String loopNames : names )
+        {
+            System.out.println(loopNames);
+        }
+    }
+
+    static void usingForEach()
+    {
+        int[] numbers = {10,3,5,-20,0,23}; int sum = 0;
+
+        for( int loop : numbers)
+        {
+            sum+=loop;
+        }
+
+        System.out.println("Sum of all elements in array is: " + sum);
+    }
+
+    static int countWords(String str)
+    {
+        String[] containerStr = str.split(" ");
+
+        return containerStr.length;
+    }
+
+    static int countVowels(String str)
+    {
+/*      char[] loopString = str.toCharArray();
+        int vowelCount = 0;
+
+        for(char check : loopString)
+        {
+            vowelCount = (check == 'a' || check == 'e' || check == 'i' || check == 'o' || check == 'u' ||
+                    check == 'A' || check == 'E' || check == 'I' || check == 'O' || check == 'U') ? vowelCount+1 : vowelCount;
+        }*/
+
+        int vowelCount = 0;
+
+        for(int iterate = 0 ; iterate < str.length() ; iterate++)
+        {
+            vowelCount = (str.charAt(iterate) == 'a' || str.charAt(iterate) == 'e' || str.charAt(iterate) == 'i' || str.charAt(iterate) == 'o' || str.charAt(iterate) == 'u' ||
+                    str.charAt(iterate) == 'A' || str.charAt(iterate) == 'E' || str.charAt(iterate) == 'I' || str.charAt(iterate) == 'O' || str.charAt(iterate) == 'U') ? vowelCount+1 : vowelCount;
+        }
+
+        return vowelCount;
     }
 }
